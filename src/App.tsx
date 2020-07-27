@@ -1,26 +1,23 @@
-import React from 'react';
-import logo from './logo.svg';
+import React, {useState, useEffect} from 'react';
 import './App.css';
+import {IUser} from './models/IUser';
+import axios from 'axios';
+import ProjectList from "./components/projects/ProjectList";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+const App: React.FC = () => {
+    const [users, setUsers] = useState<IUser[]>([])
+    useEffect(() => {
+        axios.get('https://jsonplaceholder.typicode.com/users')
+            .then((response) => {
+            setUsers(response.data)
+        })
+    }, [])
+
+    return (
+        <div className="App container-fluid">
+            <ProjectList users={users}/>
+        </div>
+    );
 }
 
 export default App;
