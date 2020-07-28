@@ -1,4 +1,4 @@
-import {IGeo} from "./IGeo";
+import {IGeo} from './IGeo';
 
 export interface IAddress {
     "street": string,

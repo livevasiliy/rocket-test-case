@@ -1,10 +1,10 @@
 import React, {useState, useEffect} from 'react';
 import axios from 'axios'
-import {IUser} from "../../models/IUser";
+import {IUser} from '../../models/IUser';
 import {IProject} from '../../models/IProject';
 import {ProjectListProps} from '../../types/ProjectListProps';
-import ProjectItem from "./project/ProjectItem";
-import Search from "./../common/Search";
+import ProjectItem from './project/ProjectItem';
+import Search from './../common/Search';
 
 const ProjectList: React.FC<ProjectListProps> = ({users}) => {
 

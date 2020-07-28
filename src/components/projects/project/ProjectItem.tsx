@@ -1,6 +1,6 @@
 import React from 'react';
-import styled from "styled-components";
-import {ProjectItemProps} from "../../../types/ProjectItemProps";
+import styled from 'styled-components';
+import {ProjectItemProps} from '../../../types/ProjectItemProps';
 
 const Wrapper = styled.div`
     margin-top: 1rem;

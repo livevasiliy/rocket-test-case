@@ -1,6 +1,6 @@
-import React from "react";
+import React from 'react';
 import logo from '../../assets/logo.svg';
-import githubLogo from "../../assets/github.svg";
+import githubLogo from '../../assets/github.svg';
 
 const Header: React.FC = () => {
     return (
