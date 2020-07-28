@@ -1,0 +1,24 @@
+{
+  "files": {
+    "main.css": "/rocket-test-case/static/css/main.2b9d050d.chunk.css",
+    "main.js": "/rocket-test-case/static/js/main.229026b0.chunk.js",
+    "main.js.map": "/rocket-test-case/static/js/main.229026b0.chunk.js.map",
+    "runtime-main.js": "/rocket-test-case/static/js/runtime-main.d8a70945.js",
+    "runtime-main.js.map": "/rocket-test-case/static/js/runtime-main.d8a70945.js.map",
+    "static/js/2.a833b3e0.chunk.js": "/rocket-test-case/static/js/2.a833b3e0.chunk.js",
+    "static/js/2.a833b3e0.chunk.js.map": "/rocket-test-case/static/js/2.a833b3e0.chunk.js.map",
+    "index.html": "/rocket-test-case/index.html",
+    "precache-manifest.e5f84db128a1a1f53461a61b933b3a47.js": "/rocket-test-case/precache-manifest.e5f84db128a1a1f53461a61b933b3a47.js",
+    "service-worker.js": "/rocket-test-case/service-worker.js",
+    "static/css/main.2b9d050d.chunk.css.map": "/rocket-test-case/static/css/main.2b9d050d.chunk.css.map",
+    "static/js/2.a833b3e0.chunk.js.LICENSE.txt": "/rocket-test-case/static/js/2.a833b3e0.chunk.js.LICENSE.txt",
+    "static/media/github.svg": "/rocket-test-case/static/media/github.104e26e5.svg",
+    "static/media/logo.svg": "/rocket-test-case/static/media/logo.ee7cd8ed.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.d8a70945.js",
+    "static/js/2.a833b3e0.chunk.js",
+    "static/css/main.2b9d050d.chunk.css",
+    "static/js/main.229026b0.chunk.js"
+  ]
+}
