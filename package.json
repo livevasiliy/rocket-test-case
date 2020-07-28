@@ -1,6 +1,5 @@
 {
   "name": "rocket-test-case",
-  "homepage": "https://livevasiliy.github.io/rocket-test-case",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -20,9 +19,7 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject",
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -b master -d build"
+    "eject": "react-scripts eject"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -43,7 +40,6 @@
     "@types/styled-components": "^5.1.1",
     "axios": "^0.19.2",
     "bootstrap": "^4.5.0",
-    "gh-pages": "^3.1.0",
     "node-sass": "^4.14.1",
     "styled-components": "^5.1.1"
   },
