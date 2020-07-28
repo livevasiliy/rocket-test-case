@@ -2,15 +2,15 @@ import React, {useState, useEffect} from 'react';
 import axios from 'axios'
 import {IUser} from "../../models/IUser";
 import {IProject} from '../../models/IProject';
+import {ProjectListProps} from '../../types/ProjectListProps';
 import ProjectItem from "./project/ProjectItem";
-
-interface ProjectListProps {
-    users: IUser[]
-}
+import Search from "./../common/Search";
 
 const ProjectList: React.FC<ProjectListProps> = ({users}) => {
 
     const [arProjects, setarProjects] = useState<Array<IProject[]>>([])
+    const [searchValue, setSearchValue] = useState<string>("");
+    const [filterableProjects, setFilterableProjects] = useState<Array<IProject[]>>([])
 
     useEffect(() => {
         users.map(user => {
@@ -22,13 +22,31 @@ const ProjectList: React.FC<ProjectListProps> = ({users}) => {
 
     }, [users]);
 
+    useEffect(() => {
+        const results = arProjects.map(projects => {
+            return projects.filter(project => {
+                return project.title.toLowerCase().includes(searchValue);
+            })
+        });
+        setFilterableProjects(results)
+    }, [searchValue, arProjects])
+
     function getUser(id: number) {
         return users.find(user => user.id === id) as IUser;
     }
 
+    const changeHandler = (event: React.ChangeEvent<HTMLInputElement>) => {
+        setSearchValue(event.target.value)
+    }
+
     return (
-        <div className={"row"}>
-            {arProjects.map(projects => {
+        <>
+            <Search
+                value={searchValue}
+                placeholder={"Введите название проекта"}
+                handleChange={changeHandler}
+            />
+            {filterableProjects.map(projects => {
                 return projects.map(project => {
                         return (
                             <ProjectItem
@@ -44,7 +62,7 @@ const ProjectList: React.FC<ProjectListProps> = ({users}) => {
                     }
                 )
             })}
-        </div>
+        </>
     )
 }
 

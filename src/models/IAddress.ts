@@ -1,9 +1,9 @@
-import { IGeo } from "./IGeo";
+import {IGeo} from "./IGeo";
 
 export interface IAddress {
-    "street": "Kulas Light",
-    "suite": "Apt. 556",
-    "city": "Gwenborough",
-    "zipcode": "92998-3874",
+    "street": string,
+    "suite": string,
+    "city": string,
+    "zipcode": string,
     geo: IGeo
 }

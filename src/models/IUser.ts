@@ -1,4 +1,4 @@
-import { IAddress } from "./IAddress"
+import {IAddress} from "./IAddress"
 import {ICompany} from "./ICompany";
 
 export interface IUser {

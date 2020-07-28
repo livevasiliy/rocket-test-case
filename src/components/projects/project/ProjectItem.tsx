@@ -1,6 +1,6 @@
 import React from 'react';
-import {ProjectItemProps} from "../../../types/ProjectItemProps";
 import styled from "styled-components";
+import {ProjectItemProps} from "../../../types/ProjectItemProps";
 
 const Wrapper = styled.div`
     margin-top: 1rem;
@@ -8,25 +8,34 @@ const Wrapper = styled.div`
 `
 
 const Card = styled.div`
-    display: flex;
+    display: flex;    
+    height: 150px;
     font-size: 16px;
+    -webkit-box-shadow: 10px 10px 14px -4px rgba(0,0,0,0.28);
+    -moz-box-shadow: 10px 10px 14px -4px rgba(0,0,0,0.28);
+    box-shadow: 10px 10px 14px -4px rgba(0,0,0,0.28);
 `
 
 const CardBody = styled.div`
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
     width: 100%;
     height: 100%;
-    background-color: #ffffff;
+    background-color: #343a40;
 `
 
 const CardTitle = styled.h2`
     font-size: 18px;
-    margin-left: 1rem;
+    margin: 0.5rem 1rem;
+    color: #ffffff;
 `
 const CardSubTitle = styled.h5`
     font-size: 14px;
-    font-weight: 300;
+    font-weight: 400;
     margin-left: 1rem;
-    color: #383838;
+    color: #ffffff;
 `
 
 const ProjectItem: React.FC<ProjectItemProps> = ({project}) => {
@@ -36,10 +45,10 @@ const ProjectItem: React.FC<ProjectItemProps> = ({project}) => {
                 <Card className={"card"}>
                     <CardBody>
                         <CardTitle>{project.title}</CardTitle>
-                        <p className={"card-text"}>
+                        <div>
                             <CardSubTitle>{project.name}</CardSubTitle>
                             <CardSubTitle>nickname: {project.username}</CardSubTitle>
-                        </p>
+                        </div>
                     </CardBody>
                 </Card>
             </Wrapper>
